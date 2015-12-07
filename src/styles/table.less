@@ -1,0 +1,55 @@
+@cell_width: 90px;
+@cell_height: 30px;
+
+[data-park="tab_wrap"]{
+    position: relative;
+    table[data-park="table"]{
+        border-collapse: collapse;
+        td, th {
+            width: @cell_width;
+            min-width: @cell_width;
+            max-width: @cell_width;
+            height: @cell_height;
+            border: 1px solid #95A5A6;
+            text-align: center;
+            box-sizing: border-box;
+            &.slot_time{
+                background-color: #3498DB;
+                font-weight: 600;
+                border: 1px solid #ECF0F1;
+                color: #ECF0F1;
+            }
+        }
+    }
+}
+
+.current_time{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 4px;
+    background-color: #D35400;
+    top: 0;
+    left: 0;
+}
+
+[data-park="vehicles"]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.component_vehicle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #27AE60;
+    width: @cell_width - 2px;
+    min-height: @cell_height;
+    &.moto{
+        background-color: #27AE60;
+        width: @cell_width / 2;
+    }
+}

@@ -24,7 +24,8 @@ var paths = {
         htmlIndex: 'src/index.html',
         css: 'src/styles/**/*.less',
         js: 'src/scripts/**',
-        libs: 'src/libs/**'
+        libs: 'src/libs/**/',
+        json: 'src/data/**/*.json'
         },
 }
 
@@ -42,7 +43,7 @@ gulp.task('default', ['connect','clean'], function() {
     gulp.watch(paths.src.css, ['styles']);
     gulp.watch(paths.src.js, ['scripts']);
     gulp.watch(paths.src.libs, ['libs']);
-    gulp.watch(paths.src.libs, ['dataJSON']);
+    gulp.watch(paths.src.json, ['dataJSON']);
 });
 
 gulp.task('clean', function(cb) {

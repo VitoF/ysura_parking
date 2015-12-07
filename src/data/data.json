@@ -1,123 +1,25 @@
-[
-  {
-    "slots":[
-      {
-        "parkings":[
-          {
-            "vehicleType": "car",
-            "plate":"LS-1232",
-            "time":10
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"LS-4923",
-            "time":140
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"LS-5123",
-            "time":420
-          }
+{
+    "info": {
+        "types": "1-motorcycle needs a half of a slot, 2-car needs full slot",
+        "levels":[
+            {
+                "levelId": 1,
+                "slotsLength": 12
+            },
+            {
+                "levelId": 2,
+                "slotsLength": 15
+            }
         ]
-      },
-      {
-        "parkings":[
-          {
-            "vehicleType": "car",
-            "plate":"BS-1232",
-            "time":50
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"WS-4923",
-            "time":100
-          }
-        ]
-      },
-      {
-        "parkings":[
-          {
-            "vehicleType": "motorbike",
-            "plate":"BS-1232",
-            "time":310
-          },
-          {
-            "vehicleType": "car",
-            "plate":"WS-4923",
-            "time":130
-          },
-          {
-            "vehicleType": "car",
-            "plate":"WS-4923",
-            "time":200
-          }
-        ]
-      },
-      {
-        "parkings":[
-          {
-            "vehicleType": "motorbike",
-            "plate":"BS-1232",
-            "time":10
-          },
-          {
-            "vehicleType": "car",
-            "plate":"WS-4923",
-            "time":100
-          }
-        ]
-      }
+    },
+    "slots": [
+        {
+            "level": 0,
+            "slot": 1,
+            "type": 1,
+            "plate": "LS-1234",
+            "startTime": 100,
+            "endTime": 320
+        }
     ]
-  },
-  {
-    "slots":[
-      {
-        "parkings":[
-          {
-            "vehicleType": "car",
-            "plate":"ty-1232",
-            "time":10
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"vb-4923",
-            "time":80
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"fg-5123",
-            "time":550
-          }
-        ]
-      },
-      {
-        "parkings":[
-          {
-            "vehicleType": "car",
-            "plate":"BS-1232",
-            "time":60
-          },
-          {
-            "vehicleType": "motorbike",
-            "plate":"WS-4923",
-            "time":100
-          }
-        ]
-      },
-      {
-        "parkings":[
-          {
-            "vehicleType": "car",
-            "plate":"AS-1232",
-            "time":100
-          },
-          {
-            "vehicleType": "car",
-            "plate":"OS-4923",
-            "time":310
-          }
-        ]
-      }
-    ]
-  }
-]
+}
