@@ -1,4 +1,4 @@
-// ECMAScript 6 is used here
+// ECMAScript 6 elements are used here
 
 'use strict';
 
