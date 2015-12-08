@@ -12,7 +12,7 @@ function Init(){
             CurrentTime();
             // And here we render all vehicles
             for (let i = 0; i < Data.slots.length; i++){
-                var vehicle = Data.slots[0];
+                var vehicle = Data.slots[i];
                 AddVehicle(vehicle.level, vehicle.slot, vehicle.type, vehicle.plate, vehicle.startTime, vehicle.endTime);
             }
         });

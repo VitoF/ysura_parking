@@ -19,7 +19,79 @@
             "type": 1,
             "plate": "LS-1234",
             "startTime": 100,
-            "endTime": 320
+            "endTime": 300
+        },
+        {
+            "level": 0,
+            "slot": 3,
+            "type": 2,
+            "plate": "MO-1234",
+            "startTime": 300,
+            "endTime": 330
+        },
+        {
+            "level": 0,
+            "slot": 3,
+            "type": 2,
+            "plate": "MO-4312",
+            "startTime": 320,
+            "endTime": 430
+        },
+        {
+            "level": 0,
+            "slot": 6,
+            "type": 2,
+            "plate": "MO-2525",
+            "startTime": 20,
+            "endTime": 600
+        },
+        {
+            "level": 0,
+            "slot": 6,
+            "type": 2,
+            "plate": "MO-4312",
+            "startTime": 100,
+            "endTime": 750
+        },
+        {
+            "level": 0,
+            "slot": 6,
+            "type": 2,
+            "plate": "MO-4852",
+            "startTime": 650,
+            "endTime": 800
+        },
+        {
+            "level": 0,
+            "slot": 7,
+            "type": 2,
+            "plate": "MO-1111",
+            "startTime": 50,
+            "endTime": 700
+        },
+        {
+            "level": 0,
+            "slot": 7,
+            "type": 2,
+            "plate": "MO-2323",
+            "startTime": 0,
+            "endTime": 550
+        },
+        {
+            "level": 0,
+            "slot": 7,
+            "type": 2,
+            "plate": "MO-3333",
+            "startTime": 600,
+            "endTime": 721
+        },
+        {
+            "level": 0,
+            "slot": 1,
+            "type": 1,
+            "plate": "LS-9898",
+            "startTime": 600,
+            "endTime": 800
         }
     ]
 }
