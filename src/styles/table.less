@@ -3,6 +3,9 @@
 
 [data-park="tab_wrap"]{
     position: relative;
+    width: 100%;
+//    overflow-x: scroll;
+//    overflow: hidden;
     table[data-park="table"]{
         border-collapse: collapse;
         td, th {
@@ -13,17 +16,50 @@
             text-align: center;
             box-sizing: border-box;
             padding: 0;
-            &.slot_time{
-                background-color: #3498DB;
-                font-weight: 600;
-                border: 1px solid #ECF0F1;
-                color: #ECF0F1;
-                vertical-align: top;
-                text-align: right;
-                padding: 3px 3px 0 0;
-                font-size: 14px;
-                min-width: @cell_width - 30px;
+        }
+        tr:first-child{
+            td{
+                border-top: none;
             }
+        }
+    }
+}
+
+.tabs_wrap{
+    display: none;
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    box-sizing: border-box;
+    padding: 0 0 0 @cell_width - 30px;
+    max-height: 480px;
+//    overflow: scroll;
+    overflow: scroll;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+    &.active{display: block;}
+}
+
+[data-park="time_wrap"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    table[data-park="time_table"]{
+        border-collapse: collapse;
+        td, th{
+            max-width: @cell_width;
+            height: @cell_height;
+            box-sizing: border-box;
+            padding: 0;        
+            background-color: #3498DB;
+            font-weight: 600;
+            border: 1px solid #ECF0F1;
+            color: #ECF0F1;
+            vertical-align: top;
+            text-align: right;
+            padding: 3px 3px 0 0;
+            font-size: 14px;
+            min-width: @cell_width - 30px;
         }
     }
 }
@@ -32,8 +68,8 @@
     position: absolute;
     z-index: 100;
     width: 100%;
-    height: 4px;
-    background-color: #D35400;
+    height: 8px;
+    background-color: rgba(234, 131, 63, 0.82);
     top: 0;
     left: 0;
 }
@@ -56,8 +92,10 @@
     min-height: @cell_height;
     color: #ECF0F1;
     box-sizing: border-box;
+    border-left: 1px solid #ECF0F1;
     display: table;
     overflow: hidden;
+    cursor: pointer;
     .component_vehicle_plate{
         font-weight: 600;
         font-size: 14px;
@@ -70,18 +108,35 @@
         text-align: center;
         vertical-align: middle;
     }
+    &:hover{
+        background-color: #2ECC71;
+    }
     &.moto{
         width: @cell_width / 2;
         background-color: #E67E22;
+        &:hover{background-color: #F39C12;}
         &.second{
             background-color: #E74C3C;
+            &:hover{background-color: #C0392B;}
         }
     }
-//    &:before{
-//        content: " ";
-//        display: inline-block;
-//        min-height: inherit;
-//        height: 100%;
-//        vertical-align: middle;
-//    }
+}
+
+.level_head_button{
+    display: block;
+    margin: 15px 5% 7px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #7F8C8D;
+    height: 45px;
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 15px;
+    color: #2C3E50;
+    &.active{
+        background-color: #3498DB;
+        color: #ECF0F1; 
+    }
 }
