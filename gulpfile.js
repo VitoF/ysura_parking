@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     del = require('del'),
-    swig = require('gulp-swig');
+    swig = require('gulp-swig'),
+    uglify = require('gulp-uglify');
 
 	
 /*******************************************************************************
@@ -57,13 +58,11 @@ gulp.task('clean', function(cb) {
 *******************************************************************************/
 gulp.task('styles', function() {
    return gulp.src(paths.src.css)
-	  .pipe(concat('style.css'))
+	  .pipe(concat('style.min.css'))
       .pipe(less({
         plugins: [autoprefix]
       }))
-      .pipe(gulp.dest(paths.result.css))
 	  .pipe(minifycss())
-	  .pipe(concat('style.min.css'))
 	  .pipe(gulp.dest(paths.result.css));
 });
     
@@ -78,7 +77,10 @@ gulp.task('scripts', function() {
 });
 gulp.task('libs', function() {
   return gulp.src(paths.src.libs)
-    .pipe(concat('libs.js'))
+//    .pipe(concat('libs.js'))
+//    .pipe(gulp.dest(paths.result.js))
+    .pipe(uglify())
+    .pipe(concat('libs.min.js'))
     .pipe(gulp.dest(paths.result.js));
 });
 
